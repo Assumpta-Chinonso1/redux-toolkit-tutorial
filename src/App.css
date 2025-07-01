@@ -111,3 +111,80 @@ body {
   background-color: #ff4e4e;
   color: white;
 }
+
+
+/* === Mobile Devices (Extra Small: Phones) === */
+@media screen and (max-width: 480px) {
+  .todo-container {
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .todo-input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .todo-input,
+  .todo-add-button {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-delete-button {
+    align-self: flex-end;
+  }
+}
+
+/* === Tablets (Small to Medium Screens) === */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .todo-container {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  .todo-input {
+    width: 70%;
+  }
+
+  .todo-add-button {
+    width: 28%;
+  }
+}
+
+/* === Small Laptops and Larger Tablets === */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .todo-container {
+    padding: 2rem 3rem;
+    margin: 0 auto;
+  }
+
+  .todo-input {
+    width: 65%;
+  }
+
+  .todo-add-button {
+    width: 30%;
+  }
+}
+
+/* === Desktops and Large Screens === */
+@media screen and (min-width: 1025px) {
+  .todo-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem 4rem;
+  }
+
+  .todo-input {
+    width: 65%;
+  }
+
+  .todo-add-button {
+    width: 30%;
+  }
+}
