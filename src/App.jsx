@@ -105,7 +105,7 @@ const styles = {
     backgroundColor: 'red',
     color: 'white',
     border: 'none',
-    padding: '0.3rem 0.7rem',
+    padding: '0.3rem 0.9rem',
     cursor: 'pointer',
   },
 };
