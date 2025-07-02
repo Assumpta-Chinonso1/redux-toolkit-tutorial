@@ -185,5 +185,94 @@ input[type="text"] {
   cursor: pointer;
 }
 
+/* Extra Small Devices (Phones: ≤480px) */
+@media screen and (max-width: 480px) {
+  .todo-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  input[type="text"],
+  .add-button {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .delete-button {
+    width: 100%;
+  }
+}
+
+/* Small Devices (Tablets: 481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .todo-container {
+    padding: 2rem;
+    margin: 1rem auto;
+  }
+
+  .input-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  input[type="text"] {
+    width: 70%;
+  }
+
+  .add-button {
+    width: 28%;
+  }
+
+  .delete-button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Medium Devices (Laptops: 769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .todo-container {
+    padding: 2rem 3rem;
+    margin: 2rem auto;
+  }
+
+  input[type="text"] {
+    width: 65%;
+  }
+
+  .add-button {
+    width: 30%;
+  }
+
+  .delete-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Large Devices (Desktops: ≥1025px) */
+@media screen and (min-width: 1025px) {
+  .todo-container {
+    max-width: 600px;
+    padding: 2.5rem 4rem;
+  }
+
+  .delete-button,
+  .add-button {
+    font-size: 1.05rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
 
 
