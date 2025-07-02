@@ -28,3 +28,23 @@ const todosSlice = createSlice({
 export const {addTodo, toggleTodo, deleteTodo} = todosSlice.actions;
 export default todosSlice.reducer */
 
+
+
+
+
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+    todos: [],
+}
+
+const todosSlice = createSlice ({
+    name: 'todos',
+    initialState,
+    reducers:{
+        addTodo: (state, action ) =>{
+            state.todos.push({text: })
+        }
+
+    }
+})
