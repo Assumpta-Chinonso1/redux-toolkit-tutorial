@@ -43,7 +43,15 @@ const todosSlice = createSlice ({
     initialState,
     reducers:{
         addTodo: (state, action ) =>{
-            state.todos.push({text: })
+            state.todos.push({text: action.payload, completed: false})
+        }, 
+
+        toggledTodo: (state, action) => {
+            const todo = state.todos [action.payload]
+
+            if (todo){
+                todo.completed = !todo.completed
+            }
         }
 
     }
