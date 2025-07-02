@@ -59,6 +59,7 @@ export default App;*/
 
 
 import React, { useState } from 'react'
+import './App.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, deleteTodo, toggledTodo } from './Components/TodoSlice';
 
@@ -81,7 +82,7 @@ const App = () => {
     <div className='todo-container'>
       <h1 className="todo-heading">Redux ToolKit Todo-List</h1>
 
-      <div className="input-griup">
+      <div className="input-group">
         <input type="text"
         value={input} 
         onChange={(e) => setInput(e.target.value)}
@@ -95,10 +96,10 @@ const App = () => {
           <li key={index} className="todo-item">
             <input type="checkbox" 
             className='checkbox'
-            checked= {todo.completed} 
+            checked = {todo.completed} 
             onChange={() => toggledTodo(dispatch(index))}/>
-            <span className = {`todo-text ${todo.completed ? 'completed' : " "}`}>
-
+            <span className = {`todo-text ${todo.completed ? 'completed' : ''}`}>
+          {todo.text}
             </span>
 
             <div className="todo-actions">
