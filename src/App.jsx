@@ -58,6 +58,28 @@ const App = () => {
 export default App;*/
 
 
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+
+
+const App = () => {
+
+  const [input, setInput] = useState('');
+  const todos = useSelector((state) => state.todos.todos)
+  const dispatch = useDispatch()
+
+  const handleTodo = () => {
+    
+  }
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default App
+
 
 
 
