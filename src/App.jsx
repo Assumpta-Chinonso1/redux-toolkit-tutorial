@@ -43,7 +43,7 @@ const App = () => {
             </span>
 
             <div className="todo-actions">
-              <button onClick={() => dispatch(toggledTodo(deleteTodo))} className='delete-button'>Delete</button>
+              <button onClick={() => dispatch(deleteTodo(index))} className='delete-button'>Delete</button>
             </div>
 
           </li>
