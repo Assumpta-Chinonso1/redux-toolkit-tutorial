@@ -10,7 +10,7 @@ body {
   justify-content: center;
 }
 
-.todo-container {
+ /*.todo-container {
   background-color: #1e1e2f;
   padding: 2rem;
   border-radius: 1.5rem;
@@ -110,117 +110,80 @@ body {
 .delete-button:hover {
   background-color: #ff4e4e;
   color: white;
+}*/
+
+/* ==== BASE STYLES ==== */
+.todo-container {
+  background-color: #1e1e2f;
+  color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.todo-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.add-button {
+  padding: 0.7rem 1.2rem;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2b2b3d;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
+.delete-button {
+  background-color: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
 }
 
 
-/* === Mobile Devices (Extra Small: Phones) === */
-@media screen and (max-width: 480px) {
-  .todo-container {
-    padding: 1rem;
-    margin: 0 auto;
-  }
 
-  .todo-input-group {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .todo-input,
-  .todo-add-button {
-    width: 100%;
-  }
-
-  .todo-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .todo-delete-button {
-    align-self: flex-end;
-  }
-}
-
-/* === Tablets (Small to Medium Screens) === */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .todo-container {
-    padding: 2rem;
-    margin: 0 auto;
-  }
-
-  .todo-input {
-    width: 70%;
-  }
-
-  .todo-add-button {
-    width: 28%;
-  }
-}
-
-/* === Small Laptops and Larger Tablets === */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .todo-container {
-    padding: 2rem 3rem;
-    margin: 0 auto;
-  }
-
-  .todo-input {
-    width: 65%;
-  }
-
-  .todo-add-button {
-    width: 30%;
-  }
-}
-
-/* === Desktops and Large Screens === */
-@media screen and (min-width: 1025px) {
-  .todo-container {
-    max-width: 600px;
-    margin: 3rem auto;
-    padding: 2rem 4rem;
-  }
-
-  .todo-input {
-    width: 65%;
-  }
-
-  .todo-add-button {
-    width: 30%;
-  }
-}
-/* === Extra Small Devices (Phones) === */
-@media screen and (max-width: 480px) {
-  .todo-add-button,
-  .todo-delete-button {
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
-  }
-}
-
-/* === Tablets (481px - 768px) === */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .todo-add-button,
-  .todo-delete-button {
-    font-size: 0.95rem;
-    padding: 0.65rem 1.2rem;
-  }
-}
-
-/* === Small Laptops (769px - 1024px) === */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .todo-add-button,
-  .todo-delete-button {
-    font-size: 1rem;
-    padding: 0.7rem 1.5rem;
-  }
-}
-
-/* === Large Screens (Desktops) === */
-@media screen and (min-width: 1025px) {
-  .todo-add-button,
-  .todo-delete-button {
-    font-size: 1.05rem;
-    padding: 0.75rem 1.8rem;
-  }
-}
