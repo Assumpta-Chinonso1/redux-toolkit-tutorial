@@ -52,7 +52,13 @@ const todosSlice = createSlice ({
             if (todo){
                 todo.completed = !todo.completed
             }
+        }, 
+        deleteTodo : (state, action) => {
+            state.todos.splice(action.payload, 1)
         }
 
     }
 })
+
+export const  {addTodo, deleteTodo, toggledTodo} = todosSlice.actions
+export default todosSlice.reducer
