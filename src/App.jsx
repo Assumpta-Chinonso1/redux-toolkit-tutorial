@@ -60,6 +60,7 @@ export default App;*/
 
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { addTodo } from './Components/TodoSlice';
 
 
 const App = () => {
@@ -69,11 +70,34 @@ const App = () => {
   const dispatch = useDispatch()
 
   const handleTodo = () => {
-    
+    if(input.trim() !== ''){
+      dispatch(addTodo(input))
+    setInput('')
+
   }
+}
+
   return (
-    <div>
-      
+    <div className='todo-container'>
+      <h1 className="todo-heading">Redux ToolKit Todo-List</h1>
+
+      <div className="input-griup">
+        <input type="text"
+        value={input} 
+        onChange={(e) => setInput(e.target.value)}
+        placeholder='Enter a Todo'/>
+
+
+        <button onClick={handleTodo} className='add-button'>Add</button>
+      </div>
+      <ul className="todo-list">
+        {todos.map((todos, index) => (
+          <li key={index} className="todo-item">
+
+          </li>
+        ))}
+      </ul>
+         
     </div>
   )
 }
