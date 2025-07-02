@@ -36,7 +36,7 @@ const App = () => {
           <li key={index} className="todo-item">
             <input type="checkbox" 
             className='checkbox'
-            checked = {todo.completed} 
+            checked= {todo.completed}
             onChange={() => toggledTodo(dispatch(index))}/>
             <span className = {`todo-text ${todo.completed ? 'completed' : ''}`}>
           {todo.text}
