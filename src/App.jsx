@@ -36,6 +36,7 @@ const App = () => {
         <ul className="todo-list">
           {todos.map((todo, index) => (
             <li key={index} className="todo-item">
+                <div className="todo-left">
               <input type="checkbox" 
               className='checkbox'
               checked={todo.completed} 
@@ -44,7 +45,8 @@ const App = () => {
               <span className={`todo-text ${todo.completed ? 'completed' : ''}`}>
                 {todo.text}
               </span>
-             <button onClick={() => dispatch(deleteTodo(index))} className="delete-button">
+            </div>
+                   <button onClick={() => dispatch(deleteTodo(index))} className="delete-button">
               Delete
              </button>
             </li>
