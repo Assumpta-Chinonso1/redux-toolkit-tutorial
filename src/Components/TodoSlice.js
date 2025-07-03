@@ -9,7 +9,7 @@ const todoSlice = createSlice ({
     initialState,
     reducers:{
         addTodo: (state, action ) => {
-            state.action.push(action.payload)
+            state.todos.push({text: action.payload, completed: false})
         },
         deleteTodo: (state, action) => {
             state.todos.splice(action.payload, 1)
