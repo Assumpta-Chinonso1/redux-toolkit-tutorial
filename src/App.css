@@ -64,25 +64,6 @@ body {
   margin: 0;
 }
 
-.todo-item {
-  background: #2b2b3d;
-  padding: 0.8rem 1rem;
-  border-radius: 0.6rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: nowrap;
-}
-
-.todo-left {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  overflow-wrap: anywhere;
-}
-
 .checkbox {
   margin-right: 0.7rem;
   transform: scale(1.2);
@@ -98,6 +79,22 @@ body {
   color: #aaa;
 }
 
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+
 .delete-button {
   background-color: transparent;
   color: #ff4d4d;
@@ -109,6 +106,7 @@ body {
   white-space: nowrap;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 .delete-button:hover {
   background-color: #ff4d4d;
