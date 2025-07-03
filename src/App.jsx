@@ -10,9 +10,9 @@ const App = () => {
   const todos = useSelector((state)=> state.todos.todos)
   const dispatch = useDispatch()
 
-  const handleTodo = () =>{
+  const handleTodo = (e) =>{
     if(input.trim() !== ''){
-      //e.preventDefault()
+      e.preventDefault()
       dispatch(addTodo(input))
       setInput('')
     }
