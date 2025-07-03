@@ -1,56 +1,58 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addTodo, deleteTodo, toggledTodo } from './Components/TodoSlice'
+import { adddTodo, deleteTodo, toggleTodo } from './Components/TodoSlice'
 import './App.css'
 
 const App = () => {
-  const [input, setInput] = useState('')
-  const todos = useSelector((state)=> state.todos.todos)
-  const dispatch = useDispatch()
+    const [input, setInput] = useState('')
+    const todos = useSelector((state)=> state.todos.todos)
+    const dispatch = useDispatch()
 
-  const handleTodo = (e) => {
-    e.preventDefault()
-    if(input.trim() !== ''){
-      dispatch(addTodo(input))
-      setInput('')
+
+    const handleTodo = (e) => {
+        e.preventDefault()
+        if(input.trim() !== '') {
+            dispatch(adddTodo(input))
+            setInput('')
+        }
     }
-  }
-  return (
-    <div className='todo-container'>
-      <h1 className="todo-heading">ReduxToolKit Todo-List</h1>
+    return (
+    <div className='todo-container'> 
+    <h1 className="todo-heading">ReduxToolKit Todo-List</h1>
 
-      <div className="input-group">
-        <input type="text" 
+     <div className="input-group">
+        <input type="text"
         value={input}
-        placeholder='Enter a todo'
-        onChange={(e)=> setInput(e.target.value)}/>
-        <button onClick={handleTodo} className="add-button">Add</button>
-      </div>
+        placeholder='Enter a Todo'
+        onChange={(e)=> setInput(e.target.value)} />
+         <button onClick={handleTodo} className="add-button">Add</button>
+     </div>
 
-      <ul className="todo-list">
-        {todos.map((todo, index)=> (
-          <li key={index} className="todo-item">
-         <div className="todo-left">
-          <input type="checkbox" 
-          className='checkbox'
-          checked={todo.completed} 
-          onChange={()=> dispatch(toggledTodo(index))}/>
-          <span className={`todo-text ${todo.completed ? 'completed' : ''}` }>
-            {todo.text}
-          </span>
-         </div>
-         <button onClick={()=> dispatch(deleteTodo(index))} className="delete-button">Delete</button>
-          </li>
+     <ul className="todo-list">
+        {todos.map((todo, index) =>(
+            <li key={index} className="todo-item">
+            <div className="todo-left">
+                <input type="checkbox" 
+                className='checkbox'
+                checked={todo.completed} 
+                onChange={() => dispatch(toggleTodo(index))}/>
+                <span className={`todo-text ${todo.completed ? 'completed' : ''}`}>
+                    {todo.text}
+                </span>
+                 </div>
+                <button onClick={()=> dispatch(deleteTodo(index))} className="delete-button">
+                      Delete
+                </button>
+           
+            </li>
         ))}
-      </ul>
+     </ul>
       
     </div>
   )
 }
 
 export default App
-
-
 
 
 
