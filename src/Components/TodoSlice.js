@@ -17,7 +17,7 @@ const todoSlice = createSlice({
         toggledTodos: (state, action) => {
             const todo = state.todos[action.payload]
             if(todo){
-                todo.completed = ! todo.completed
+                todo.completed = !todo.completed
             }
         }
     }
