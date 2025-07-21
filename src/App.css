@@ -1,12 +1,12 @@
 /* === Base Reset === */
     body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #8758ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #8758ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     min-height: 100vh;
 }
 
  .todo-container {
