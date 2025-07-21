@@ -33,7 +33,7 @@ const App = () => {
                 <div className="todo-left">
                   <input type="checkbox" 
                     className='checkbox'
-                    checked={todo.completed}
+                      checked={todo.completed}
                     onChange={()=> dispatch(toggledTodos(index))}/>
                     <span className={`todo-text ${todo.completed ? 'completed' : ''}`}>
                       {todo.text}
