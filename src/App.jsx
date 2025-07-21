@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addTodos, deleteTodos, toggledTodos } from './Components/TodoSlice';
 import './App.css'
 
+
+
 const App = () => {
     const [input, setInput] = useState('');
     const todos = useSelector((state)=> state.todos.todos)
@@ -10,7 +12,7 @@ const App = () => {
 
     const handleTodo = (e) => {
         e.preventDefault();
-        
+
         if(input.trim() !== ''){
             dispatch(addTodos(input));
             setInput('')
