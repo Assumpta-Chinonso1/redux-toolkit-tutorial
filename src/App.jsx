@@ -24,7 +24,7 @@ const App = () => {
         <input type="text" 
                value={input}
                   onChange={(e)=> setInput(e.target.value)}/>
-                 <button onClick={handleTodo} className="add-button">Add</button>
+                 <button onClick={handleTodo} className="add-button"> Add </button>
       </div>
 
       <ul className="todo-list">
