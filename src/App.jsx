@@ -22,9 +22,9 @@ const App = () => {
       <div className="input-group">
 
         <input type="text" 
-        value={input}
-        onChange={(e)=> setInput(e.target.value)}/>
-        <button onClick={handleTodo} className="add-button">Add</button>
+               value={input}
+                  onChange={(e)=> setInput(e.target.value)}/>
+                 <button onClick={handleTodo} className="add-button">Add</button>
       </div>
 
       <ul className="todo-list">
