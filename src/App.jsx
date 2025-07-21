@@ -26,7 +26,7 @@ const App = () => {
         onChange={(e)=> setInput(e.target.value)}/>
         <button onClick={handleTodo} className="add-button">Add</button>
       </div>
-      
+
       <ul className="todo-list">
         {todos.map((todo, index)=>(
             <li key={index} className="todo-item">
@@ -39,7 +39,7 @@ const App = () => {
                       {todo.text}
                     </span>
                 </div>
-                <button onClick={()=> dispatch(deleteTodos(index))} className="delete-button">Delete</button>
+                <button onClick={()=> dispatch(deleteTodos(index))} className="delete-button"> Delete </button>
             </li>
         ))}
       </ul>
