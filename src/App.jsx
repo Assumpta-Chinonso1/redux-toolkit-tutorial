@@ -35,10 +35,11 @@ const App = () => {
                     className='checkbox'
                       checked={todo.completed}
                       onChange={()=> dispatch(toggledTodos(index))}/>
-                      
+
                     <span className={`todo-text ${todo.completed ? 'completed' : ''}`}>
                       {todo.text}
                     </span>
+                    
                 </div>
                 <button onClick={()=> dispatch(deleteTodos(index))} className="delete-button"> Delete </button>
             </li>
