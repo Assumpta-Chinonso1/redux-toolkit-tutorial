@@ -16,7 +16,7 @@ const App = () => {
         }
     }
   return (
-    <div className='todo-container'>
+          <div className='todo-container'>
       <h1 className="todo-heading"> ReduxToolKit Todo-List </h1>
 
       <div className="input-group">
