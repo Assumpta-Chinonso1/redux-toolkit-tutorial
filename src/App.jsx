@@ -20,12 +20,13 @@ const App = () => {
       <h1 className="todo-heading"> ReduxToolKit Todo-List </h1>
 
       <div className="input-group">
-        
+
         <input type="text" 
         value={input}
         onChange={(e)=> setInput(e.target.value)}/>
         <button onClick={handleTodo} className="add-button">Add</button>
       </div>
+      
       <ul className="todo-list">
         {todos.map((todo, index)=>(
             <li key={index} className="todo-item">
