@@ -10,6 +10,7 @@ const App = () => {
 
     const handleTodo = (e) => {
         e.preventDefault();
+        
         if(input.trim() !== ''){
             dispatch(addTodos(input));
             setInput('')
