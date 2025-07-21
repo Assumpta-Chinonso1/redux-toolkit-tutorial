@@ -20,6 +20,7 @@ const App = () => {
       <h1 className="todo-heading"> ReduxToolKit Todo-List </h1>
 
       <div className="input-group">
+        
         <input type="text" 
         value={input}
         onChange={(e)=> setInput(e.target.value)}/>
