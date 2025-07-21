@@ -15,7 +15,7 @@ const App = () => {
             setInput('')
         }
     }
-  return (
+   return (
           <div className='todo-container'>
               <h1 className="todo-heading"> ReduxToolKit Todo-List </h1>
 
