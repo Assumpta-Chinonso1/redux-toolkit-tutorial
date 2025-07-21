@@ -29,7 +29,7 @@ const App = () => {
         {todos.map((todo, index)=>(
             <li key={index} className="todo-item">
                 <div className="todo-left">
-                    <input type="checkbox" 
+                  <input type="checkbox" 
                     className='checkbox'
                     checked={todo.completed}
                     onChange={()=> dispatch(toggledTodos(index))} />
