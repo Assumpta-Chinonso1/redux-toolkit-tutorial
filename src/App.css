@@ -34,12 +34,13 @@
 }
 
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  margin-bottom: 1.5rem;
-}
+   .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+ }
+
 
 .input-group input {
   padding: 0.9rem 1rem;
